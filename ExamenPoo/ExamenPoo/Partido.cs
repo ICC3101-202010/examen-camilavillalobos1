@@ -1,7 +1,7 @@
 ﻿using System;
 namespace ExamenPoo
 {
-    public class Partido
+    public class Partido : IMedico
     {
         public DateTime duracion;
         public Equipo equipo1;
@@ -31,6 +31,10 @@ namespace ExamenPoo
             }
 
 
+        }
+        public void Simulacion()
+        {
+            Console.WriteLine("");
         }
 
         public string InformacionPartido()
