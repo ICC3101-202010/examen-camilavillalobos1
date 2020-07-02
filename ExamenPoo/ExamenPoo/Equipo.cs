@@ -36,19 +36,61 @@ namespace ExamenPoo
         {
             if (equipo.Tipo == "Nacional")
             {
-                foreach (var item in Jugadores)
+                if (equipo.Nombre == "Chile")
                 {
-                    if (item.Nacionalidad == "chileno")
+                    foreach (var item in Jugadores)
                     {
-                        Console.WriteLine("Soy nacional");
+                        if (item.Nacionalidad == "Chileno")
+                        {
+                            Console.WriteLine("Soy nacional");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No soy de la misma nacion");
+                            Jugadores.Remove(item);
+                        }
                     }
-                    else
-                    {
-                        Console.WriteLine("No soy de la misma nacion");
-                        Jugadores.Remove(item);
-                    }
+
                 }
+                else if (equipo.Nombre == "Argentina")
+                {
+                    foreach (var item in Jugadores)
+                    {
+                        if (item.Nacionalidad == "Argentino")
+                        {
+                            Console.WriteLine("Soy nacional");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No soy de la misma nacion");
+                            Jugadores.Remove(item);
+                        }
+                    }
+
+                }
+                else if (equipo.Nombre == "Brasil")
+                {
+                    foreach (var item in Jugadores)
+                    {
+                        if (item.Nacionalidad == "Brasileño")
+                        {
+                            Console.WriteLine("Soy nacional");
+                        }
+                        else
+                        {
+                            Console.WriteLine("No soy de la misma nacion");
+                            Jugadores.Remove(item);
+                        }
+                    }
+
+                }
+
             }
+        }
+
+        public void CrearEquipo()
+        {
+
         }
         public string Informacion()
         {
