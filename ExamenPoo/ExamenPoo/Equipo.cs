@@ -11,17 +11,30 @@ namespace ExamenPoo
         public Medico Medico;
         public int Goles;
         
-        public Equipo(List<Jugadores> jugadores, Entrenador entrenador, Medico medico, int goles)
+
+        public Equipo(string nombre, string tipo, List<Jugadores> jugadores, Entrenador entrenador, Medico medico, int goles)
         {
+            Nombre = nombre;
+            Tipo = tipo;
             Jugadores = jugadores;
             Entrenador = entrenador;
             Medico = medico;
             Goles = goles;
         }
 
-        public void CorroborarNacionalidad()
+        public void CorroborarEquipo(List<Jugadores> jugadores)
         {
-            if (Tipo == "Nacional")
+            if (jugadores.Count > 15)
+            {
+                Console.WriteLine("Debe eliminar un jugador");
+                Entrenador.CambiarJugador(jugadores);
+            }
+
+        }
+
+        public void CorroborarNacionalidad(Equipo equipo)
+        {
+            if (equipo.Tipo == "Nacional")
             {
                 foreach (var item in Jugadores)
                 {
@@ -48,6 +61,7 @@ namespace ExamenPoo
             datos += "/nMedico:" + Medico;
             return datos;
         }
+        
 
     }
 }

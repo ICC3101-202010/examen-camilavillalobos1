@@ -29,10 +29,13 @@ namespace ExamenPoo
             {
                 corr = false;
             }
+
+
         }
 
         public string InformacionPartido()
         {
+            CorroborarEquipos();
             string datos = "";
             datos += "Equipo 1: " + equipo1.Nombre;
             datos += "Equipo 2: " + equipo2.Nombre;
