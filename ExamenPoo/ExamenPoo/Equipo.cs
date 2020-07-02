@@ -5,7 +5,7 @@ namespace ExamenPoo
     public class Equipo
     {
         public string Nombre;
-        public string Tipo;
+        public string Tipo; //Nacional o Liga
         public List<Jugadores> Jugadores;
         public Entrenador Entrenador;
         public Medico Medico;

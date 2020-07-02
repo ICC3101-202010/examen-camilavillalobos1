@@ -6,6 +6,7 @@ namespace ExamenPoo
         public DateTime duracion;
         public Equipo equipo1;
         public Equipo equipo2;
+        bool corr = false;
 
         public Partido()
         {
@@ -16,6 +17,18 @@ namespace ExamenPoo
             this.duracion = duracion;
             this.equipo1 = equipo1;
             this.equipo2 = equipo2;
+        }
+
+        public void CorroborarEquipos()
+        {
+            if (equipo1.Tipo == equipo2.Tipo)
+            {
+                corr = true;
+            }
+            else
+            {
+                corr = false;
+            }
         }
 
         public string InformacionPartido()
